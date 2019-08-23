@@ -1,0 +1,63 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<title>JavaJam Coffee House Gear</title>
+<meta charset="utf-8">
+<link href="javajam.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+<header role="banner">
+<h1>JavaJam Coffee House</h1>
+<div class="sidebar">
+	<a href = "FavoriteTwitterSearches.html">
+	<img src = "buttons/twitterSearches.jpg" width = "100" height = "50" alt = "Favorite Twitter Searches"></a>
+</div><!-- end sidebar -->
+</header>
+<nav role="navigation">Menu
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+	  <li><a href="gear.html">Gear</a></li>
+	</ul>
+</nav>
+<main role="main">
+<p>JavaJam gear not only looks good, it&rsquo;s good to your wallet too.</p>
+<p>Get a 10% discount when you wear a javajam shirt or bring in your javajam mug!</p>
+<h2>JavaJam Gear</h2>
+<img src="javashirt.jpg" alt="Shirt" class="floatleft" width="200" height="186" /> 
+<p>JavaJam shirts are comfortable to wear to school and around town. 100% cotton. XL only. $14.95</p>
+<form method = "post"
+	action = "http://www.webdevfoundations.net/scripts/cart.asp">
+	<input type = "hidden" name = "desc1" id = "desc1" value = "JavaJam Shirt">
+	<input type = "hidden" name = "cost1" id = "cost1" value = "14.95">
+	<input type = "submit" value = "Add to Cart">
+</form>
+<br class = "clearleft"></br>
+<img src="javamug.jpg" alt="Mug" class="floatleft" width="200" height="186" /> 
+<p>JavaJam mugs carry a full load of caffeine (12 oz.) to jump start your morning. $9.95</p>
+<form method = "post"
+	action = "http://www.webdevfoundations.net/scripts/cart.asp">
+	<input type = "hidden" name = "desc1" id = "desc2" value = "JavaJam Mug">
+	<input type = "hidden" name = "cost1" id = "cost2" value = "9.95">
+	<input type = "submit" value = "Add to Cart">
+</form>
+<br class = "clearleft"></br>
+</main>
+<footer>
+Copyright &copy; 2015 JavaJam Coffee House
+<address>
+<a href="mailto:samuel@peter.com">
+samuel@peter.com</a>
+</address>
+</footer>
+</div> <!-- end of wrapper -->
+</body>
+</html>

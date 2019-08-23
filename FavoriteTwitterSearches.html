@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html >
+<html lang="en">
+<head>
+<title>JavaJam Coffee House Favorite Twitter Searches</title>
+<meta charset="utf-8">
+
+<link href="javajam.css" rel="stylesheet">
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+   <script src = "FavoriteTwitterSearches.js"></script>
+   <script src="jquery-1.11.3.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+</head>
+<body>
+<div id="wrapper">
+<header>
+<h1>JavaJam Coffee House</h1>
+</header>
+<nav role="navigation">Menu
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+	  <li><a href="gear.html">Gear</a></li>
+	</ul>
+</nav>
+<main>
+<body>
+   <h2>Favorite Twitter Searches<h2>
+   <p id = "welcomeMessage"></p>
+   <form action = "#">
+      <p><input id = "query" type = "text" 
+         placeholder = "Enter Twitter search query">
+         <a href = "https://dev.twitter.com/docs/using-search">
+            Twitter search operators</a></p>
+      <p><input id = "tag" type = "text" placeholder = "Tag your query">
+         <input type = "button" value = "Save" 
+            id = "saveButton">
+         <input type = "button" value = "Clear All Saved Searches"
+            id = "clearButton"></p>
+   </form>
+   <h2>Previously Tagged Searches</h2>
+   <div id = "searches"></div>
+</main>
+<footer>
+Copyright &copy; 2015 JavaJam Coffee House
+<address>
+<a href="mailto:samuel@peter.com">
+samuel@peter.com</a>
+</address>
+</footer>
+</div> <!-- end of wrapper -->
+</body>
+</html>

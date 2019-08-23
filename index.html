@@ -1,0 +1,138 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<title>A Good Choice for a Business Website</title>
+<meta charset="utf-8">
+<script src="jquery-1.11.3.min.js"></script>
+<link href="javajam.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+</head>
+<body>
+
+
+<div id="wrapper">
+<header role="banner">
+<h1>JavaJam Coffee House</h1>
+<div class="sidebar">
+	<a href = "FavoriteTwitterSearches.html">
+	<img src = "buttons/twitterSearches.jpg" width = "100" height = "50" alt = "Favorite Twitter Searches"></a>
+</div><!-- end sidebar -->
+</header>
+<nav role="navigation">Menu
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+	  <li><a href="gear.html">Gear</a></li>
+	</ul>
+</nav>
+<main role="main">
+<figure>
+<img src="windingroad.jpg" alt="Winding Road" id="floatright" width="350" "height="160" align="right">
+</figure>
+<p>Follow the winding road to JavaJam</p>
+<ul>
+	<li>Specialty Coffee and Tea</li>
+	<li>Bagels, Muffins, and Organic Snacks</li>
+	<li>Music and Poetry Readings</li>
+	<li>Open Mic Night</li>
+</ul>
+<p><strong>We know you will love this! JavaJam Coffee and a live band, revitalises mind and body with flavours straight from the hedgerows.</strong></p>
+
+<div>
+    12312 Main Street<br>
+    Mountain Home, CA 93923<br>
+	<a id="mobile" href="tel:888-555-5555">1-888-555-5555</a>
+	<span id="desktop">1-888-555-5555</span>
+</div>
+<script src='http://maps.google.com/maps/api/js?sensor=false'></script>
+ <script>
+      function initMap () {
+        var latlng = new google.maps.LatLng( 62.242425, -92.601678 );
+        var options = {
+          zoom: 4,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map( document.getElementById(
+              'map_canvas' ), options );
+
+        var marker = new google.maps.Marker({
+          position: latlng,
+          map: map,
+          title: "JavaJam Coffee House marker"
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+          content: "<p>How to find Us:<br><address>12312 Main Street<br>Mountain Home, CA 93923</address></p>"
+        });
+
+        google.maps.event.addListener(marker, 'click', function(){
+          infowindow.open(map, marker);
+        });
+      }
+    </script>
+</main>
+	
+<body onload='initMap()'>
+    <div id='map_canvas' style='width:700px; height:500px'></div>
+
+<div id="twistie">
+<canvas id="canvas1" width="100" height="100">
+</canvas>
+<script>
+var mycanvas=document.getElementById("canvas1");
+var cntx=mycanvas.getContext('2d'); 
+cntx.lineCap = 'round';
+cntx.strokeStyle = 'yellow';
+cntx.lineWidth = 3;
+function turn_it(){
+  cntx.beginPath();
+  cntx.moveTo(0, 0);
+  // How far to move from center
+  move_num =2;
+  // How far to rotate around center
+  rotate_num = 0.8;  // between 0 and 1
+  // convert to radians.
+  rads = rotate_num * 2 * Math.PI;
+ 
+  // calculate positioning around center
+  for (i=1; i<=20; i++){ 
+    distance = i * move_num;
+    around = i * rads;
+    // position point to draw from
+    x = Math.cos(around) * distance;
+    y = Math.sin(around) * distance;
+     // draw line
+    cntx.lineTo(x, y);
+  }
+}
+
+cntx.translate(cntx.canvas.width/2, cntx.canvas.height/2);
+setInterval(
+  function () {
+  cntx.clearRect(-cntx.canvas.width/2, -cntx.canvas.height/2, cntx.canvas.width, cntx.canvas.height);
+  cntx.rotate(.01);  //controls rotation speed
+  turn_it.apply();
+  cntx.stroke();
+  }, 5);
+ 
+</script> </div>
+
+<footer>
+Copyright &copy; 2015 JavaJam Coffee House
+<address>
+<a href="mailto:samuel@peter.com">
+samuel@peter.com</a>
+</address>
+</footer>
+</div> <!-- end of wrapper -->
+</body>
+</html>
